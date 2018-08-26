@@ -1,0 +1,3 @@
+URI are the codes, It is the identifier of the object which makes a URL unique from the others.
+
+URL is the reader of the URI and it interprets the URI to make the redirection much simpler and so that it could take you to where you want to go in the web.

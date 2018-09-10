@@ -8,8 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
+<div id = "title">
     <title> HTTP Fundamentals</title>
+    </div>
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -102,13 +103,13 @@
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Introduction HTTP FUNDAMENTALS</h2>
 				<ul>
-					<li>HTTP (Hypertext Transfer Protocol) is a protocol or rules used by the WWW (World Wide Web) when transferring data.</li>
-					<li>Originally proposed by Tim Berners-Lee to communicate in the Web to help in the dissemination of information between institutes.</li>
-					<li>HTTP Is a request-response protocol.</li>
-					<li>Port 80 is the port that the server listens to or expects to receive from web client</li>
-					<li>HTTP is based on client - server architecture </li>
-					<li>HTTP provides support for other functionalities such as cache control, content media type(mime) specifications, language and character set\
-						specifications,content/transfer coding, client-server protocol negotitations,persistent connection, request pipelining, etc.</li>
+					<br>HTTP (Hypertext Transfer Protocol) is a protocol or rules used by the WWW (World Wide Web) when transferring data.
+					<br>Originally proposed by Tim Berners-Lee to communicate in the Web to help in the dissemination of information between institutes.
+					<br>HTTP Is a request-response protocol.
+					<br>Port 80 is the port that the server listens to or expects to receive from web client
+					<br>HTTP is based on client - server architecture 
+					<br>HTTP provides support for other functionalities such as cache control, content media type(mime) specifications, language and character set\
+						specifications,content/transfer coding, client-server protocol negotitations,persistent connection, request pipelining, etc.
 				</ul>
                 </div>
         </div>
@@ -121,9 +122,10 @@
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2>HTTP Versions </h2>
 					<ul>
-					<li> HTTP 1- use numbering scheme to assign or to indicate versions of the protocol</li>
-					<li>HTTP 1.1-To specifies standard tracks and Internet community protocol</li>
-					<li>HTTP 2- use of a single connection from browsers to a web site</li>
+					<br>HTTP 0.9 – This version was the first version of HTTP protocol and was defined in 1991. this version only consists of one method which is the GET.This method can only request a page from Server and has a response of an HTML Page.
+                    <br>HTTP 1 - This version can be calle us a browser friendly protocol because it provides both request and response using http version number, status code and content type. This consist of 3 methods namely, GET, HEAD, POST.
+					<br>This is the commonly used version currently. This version supports the following methods: GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS.
+                   
 					</ul>
                 </div>
             </div>
@@ -138,18 +140,18 @@
 				<br>
 				<h3>Request Message</h3>
 				<ul>
-				<li>Request Line</li>
-				<li>Message Header</li>
-				<li>Empty Line</li>
-				<li>Message Body</li>
+				<br>Request Line - it begins to a method token that followed by the Request URI and the protocol version, and it ends to CRLF and it separated by space or SP character
+				<br>Message Header - It contains a general header and Entity header. The message header allows the client to pass the additional information about the request and also the client to the server, and acts like request modifiers.
+				<br>Empty Line - the empty line consists of CRLF that there’s no space
+				<br>Message Body - The http message used the entity body to connect to the request or the response, and it differs from entity body when the transfer-coding has been applied.
 				</ul>
 				<br>
 				<h3>Response Message</h3>
 				<ul>
-				<li>Status Line </li>
-				<li>Message Headers</li>
-				<li>Empty Line</li>
-				<li>Message Body</li>
+				<br>Status Line - The first line of a response message is the status line consists of protocol version or HTTP version followed by their corresponding numeric status code and its textual phrase, and it creates the specified properties.
+				<br>Message Headers - Allows the server to pass additional information about the response which cannot be placed in the status line, it gives information about th server and access to its resource requested by URI.
+				<br>Empty Line - In a response messages they use a generic message formatting for the transfer of entities consisting of start line and empty line
+				<br>Message Body - A message used to carry entity body associated with the request/response, message body only differs from entity-body if transfer-coding has been applied.
 				</ul>
 				
             </div>
@@ -162,19 +164,19 @@
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>HTTP Request Methods</h2>
 				<ul>
-				<li>Get</li>
-				<li>Head</li>
-				<li>Post</li>
-				<li>Put</li>
-				<li>Delete</li>
-				<li>Options</li>
-				<li>Trace</li>
-				<li>Connect</li>
+				<br>Get – Get method requests and retrieves a representation of a specific resource.
+				<br>Head – Head method is similar to get request but it has no response body.
+				<br>Post – This method is used to send an entity to a specific resource. It usually triggers side effects.
+				<br>Put – This method changes current representations of the target resource with the request payload.
+				<br>Delete – This method will trigger deletion onto a specific resource.
+				<br>Options – This method describes the communication options for the specified target resource.
+				<br>Trace – Performs a message loop back test along the path towards the specified target resource.
+				<br>Connect – Method that creates a tunnel to the server defined by the target resource.
 				</ul>
 				<br>
 				<h4>Idempotent Methods</h4>
 				<ul>
-				<li>GET, HEAD, PUT, DELETE share this property.</li>
+				<br>GET, HEAD, PUT, DELETE share this property.
 				</ul>
             </div>
         </div>
@@ -185,10 +187,10 @@
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>HTTP Message Headers </h2>
 				<ul>
-				<li>General Header Fields</li>
-				<li>Request Header Fields</li>
-				<li>Response Header Fields</li>
-				<li> Empty Header Fields</li>
+				<br>General Header Fields
+				<br>Request Header Fields
+				<br>Response Header Fields
+				<br> Empty Header Fields
 				</ul>
                 
             </div>
@@ -213,11 +215,11 @@
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>HTTP Status Code </h2>
 				<ul>
-				<li>Information</li>
-				<li>Success</li>
-				<li>Redirection</li>
-				<li>Client Error</li>
-				<li>Server Error</li>
+				<br>Information Status(1xx) - Informational status is a provisional response. The common status for informational is 100 which is Continue.
+				<br>Success Response(2xx) - This status shows if the response is successful. The common status is 200 which is OK. This means that the request succeeded.
+				<br>Redirection(3xx) - This status indicates that further action is needed to finished the request. The common example is the 302 which means Found. This means that the requested resource is temporary in the different URI.
+				<br>Client Error(4xx) - This status shows that the request that is send to the server has error or interrupted. The common example of this is the 403 Forbidden. This means that the server refused to give the resources that the client needs.
+				<br>Server Error(5xx) - This status indicates that the server is incapable or an error has occurred insending the response. The common example is the 502. This means that the server is getting invalid response from another server.
 				</ul>
                 
             </div>

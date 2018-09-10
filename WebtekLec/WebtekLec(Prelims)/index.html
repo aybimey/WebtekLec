@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title> HTTP Fundamentals</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Creepster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Creepster" rel="stylesheet">
+    <!-- Theme CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+				<span class="light">Back To Top</span>
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from introduction link when scrolled up past introduction section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#introduction">Introduction</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#httpversion">HTTP Versions</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#terminologies">Request And Response Message </a>
+                    </li>
+					<li>
+                        <a class="page-scroll" href="#request">HTTP Request Methods </a>
+                    </li>
+					<li>
+                        <a class="page-scroll" href="#httpmessages">HTTP Message Headers</a>
+                    </li>
+					<li>
+                        <a class="page-scroll" href="#Status"> HTTP Status Code </a>
+                    </li>
+
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading">HTTP FUNDAMENTALS</h1>
+                        <a href="#introduction" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- introduction Section -->
+    <section id="introduction" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Introduction HTTP FUNDAMENTALS</h2>
+				<ul>
+					<li>HTTP (Hypertext Transfer Protocol) is a protocol or rules used by the WWW (World Wide Web) when transferring data. </li>
+					<li>Originally proposed by Tim Berners-Lee to communicate in the Web to help in the dissemination of information between institutes.</li>
+					<li>HTTP Is a request-response protocol. </li>
+					<li>Port 80 is the port that the server listens to or expects to receive from web client</li>
+					<li>HTTP is based on client - server architecture </li>
+					<li>HTTP-defines the message structure between web browser or web client requesting content or resources and the web server that is delivering the application.</li>
+
+				</ul>
+                </div>
+        </div>
+    </section>
+
+    <!-- httpversion Section -->
+    <section id="httpversion" class="content-section text-center">
+        <div class="httpversion-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>HTTP Versions </h2>
+					<ul>
+<li>HTTP 0.9 - This version was the first version of HTTP protocol and was defined in 1991. this version only consists of one method which is the GET. This method can only request a page from Server and has a response of an HTML</li> Page. 
+<li>HTTP 1 - This version can be calle us a browser friendly protocol because it provides both request and response using http version number, status code and content type. This consist of 3 methods namely, GET, HEAD, POST.</li>
+<li>HTTP 1.1- This is the commonly used version currently. This version supports the following methods: GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS.</li>
+
+					</ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- terminologies Section -->
+    <section id="terminologies" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>HTTP Request & Response Message</h2>
+				<br>
+				<h3>HTTP Request Message</h3>
+				<ul>
+<p>The http client send a request to the server that form a request message.</p>
+<li>Request Line  -it begins to a method token that followed by the Request URI and the protocol version, and it ends to CRLF and it separated by space or SP character</li>
+<li>Message Header  -It contains a general header and Entity header. The message header allows the client to pass the additional information about the request and also the client to the server, and acts like request modifiers. 
+These are the important message header field:</li>
+<br>
+				<ul>
+				<li>Accept-Charset</li>
+<li>Accept-Encoding</li>
+<li>Accept-Language</li>
+<li>Authorization</li>
+<li>Expect</li>
+<li>From</li>
+<li>Host</li>    
+				</ul>
+				<li>Empty Line  -the empty line consists of CRLF that there’s no space
+Message Body  The http message used the entity body to connect to the request or the response, and it differs from entity body when the transfer-coding has been applied.
+Ex.
+message-body = entity-body
+                | <entity-body encoded as per Transfer-Encoding></li>
+
+				</ul>
+				<h3>HTTP Response Message</h3>
+				<ul>
+				<li>After receiving a request message, a server responds with an HTTP response message.</li>
+<li>Response message use caching to store a copy of the response message and the system that controls its message storage, retrieval and deletion.</li>
+<br>
+<p>According to RFC 2616 HTTP/1.1 June 1999</o>
+<li>A response comes directly without unnecessary delay and its validity is directly checked with the origin server.</li>
+<h3>Status-Line</h3>
+<li>Status line is the first line in a response message it consists of protocol version followed by their corresponding numeric status code and textual phrase.</li>
+<img src="img/statusline.png">
+<br>
+<h3>Status code and Reason Phrase</h3>
+<li>Status-code element is a 3- digit integer result code to understand the request.</li>
+<li>Reason Phrase is intended to give a short description for the status code.</li>
+<p>Example of common Status code and Reason Phrase are:</p>
+</ul>
+<li>”403 Forbidden”</li>
+<li>”404 Page Not Found”</li>
+<li>”200 OK”</li>
+<li>”500 Internal Server Error”</li>
+</ul>
+<br>
+
+<h3>Response Header- Field</h3>
+<li>Allows the server to pass additional information about the response which cannot be placed in the status line, it gives information about the server and access to its resource requested by URI. 
+</li>
+<table style="width:100%">
+  <tr>
+    <th></th>
+    <th></th> 
+  </tr>
+  <tr>
+    <td>Accept-Ranges</td>
+    <td>Used by the server to support the partial request.</td>
+  </tr>
+  <tr>
+    <td>Age</td>
+    <td>It contains of the time seconds the object has stayed in the cache.</td>
+  </tr>
+  <tr>
+  <td>ETag</td>
+  <td>a mechanism that puts unchanged resources into the cache.</td>
+  </td>
+  <tr>
+  <td>Location</td>
+  <td>is the indicator when redirecting to another page it specifies the URL to be used.</td>
+  </tr>
+  <tr>
+  <td>Proxy-Authentication</td>
+  <td>is the one which chooses the authentication method to be used so that access can be gained to a resource behind a proxy server.</td>
+  </tr>
+  <tr>
+  <td>Retry-After</td>
+  <td>is the one responsible in informing the user agent on how long to wait before making another follow-up request.</td>
+ </tr>
+ <tr>
+ <td>Server</td>
+ <td>handles requests because it contains the information about the software that is being used by the origin server.</td>
+ </tr>
+ <tr>
+ <td>Vary</td>
+ <td>determines the matching of future request headers to be able to come up whether a cached response could be used or if it should request a new one from the origin server.</td>
+ </tr>
+ <tr>
+ <td>WWW-Authenticate</td>
+ <td>is the one responsible in defining the authentication method that is the one responsible in defining the authentication method that  </tr>
+ </tr>
+
+</table>
+<br>
+	<h3>Empty line</h3>
+	<p>According to RFC 822</p>
+	<li>Empty line- indicating the end of the header field and message body.</li>
+	<br>
+	<h3>Message Body</h3>
+	<li>Message body is a protocol element it represents line break that breaks between body-parts.</li>
+				</ul>
+				
+            </div>
+        </div>
+    </section>
+	
+	    <!-- terminologies Section -->
+    <section id="request" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>HTTP Request Methods</h2>
+				<ul>
+				<li>Get - Get method requests and retrieves a representation of a specific resource.</li>
+				<li>Head - Head method is similar to get request but it has no response body.</li>
+				<li>Post - This method is used to send an entity to a specific resource. It usually triggers side effects.</li>
+				<li>Put - his method changes current representations of the target resource with the request payload.</li>
+				<li>Delete - This method will trigger deletion onto a specific resource.</li>
+				<li>Options - This method describes the communication options for the specified target resource</li>
+				<li>Trace - Performs a message loop back test along the path towards the specified target resource.</li>
+				<li>Connect - Method that creates a tunnel to the server defined by the target resource.</li>
+				</ul>
+				<br>
+				<h4>Idempotent Methods</h4>
+				<ul>
+				<li>GET, HEAD, PUT, DELETE share this property.</li>
+				</ul>
+            </div>
+        </div>
+    </section>
+	    <!-- httpmessages Section -->
+	    <section id="httpmessages" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>HTTP Message Headers </h2>
+				<p>Consists of four types which is the General-header, The Client Request-header, The Server Response-header and the Entity-header. These are ones responsible in providing necessary information with regards to the request or response. A name which will then be followed by a colon is present in the header fields.</p>
+				<ul>
+				<li>General Header Fields - General Header Fields are the ones that are generally applicable for both the response and response messages although they don’t have relation to the data that is being transmitted to the HTTP message body.
+</li>
+<br>
+				<li>Request Header Fields - The Request Header is where you can know more information about the data to be fetched or information regarding the client. In Addition to that when you specify what information you really need, you can actually modify the request.
+</li>
+<br>
+				<li>Response Header Fields - The Response Header Fields are only applicable for response messages. This certain header field can also be used to give us a thorough context of the response.
+</li>
+<br>
+				<li> Empty Header Fields - The Entity-header fields are the ones responsible for defining the Meta information regarding the entity-body, the resource that is identified upon request is only defined if nobody is present. This header is applied to the body of the request. </li>
+				</ul>
+                
+            </div>
+        </div>
+    </section>
+	<br>
+	<br>
+	<br>
+	<br>
+		<br>
+	<br>
+	<br>
+	<br>
+		<br>
+	<br>
+	<br>
+	<br>
+	
+		    <!-- httpmessages Section -->
+	    <section id="Status" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>HTTP Status Code </h2>
+				<ul>
+				<li>Located in the response message</li>
+				<li>They give information about the response, if they are successful or failed.</li>
+				<li>hey are categorized according to the first number.</li>
+				</ul>
+				<br>
+				<p>There are 5 groups of status codes:</p>
+				<ol>
+				<li>Informational Status(1xx)</li>
+				<ul>
+				<li>Informational status is a provisional response.</li>
+                <li>The common status for informational is 100 which is Continue.</li>
+				<br>
+				</ul>
+				<li>Successful Response (2xx) </li>
+				<ul>
+				<li>This status shows if the response is successful</li>
+				<li>The common status is 200 which is OK. This means that the request succeeded.</li>
+				<br>
+				</ul>
+				<li>Redirection(3xx)</li>
+				<ul>
+				<li>This status indicates that further action is needed to finished the request.</li>
+<li>The common example is the 302 which means Found. This means that the requested resource is temporary in the different URI.</li>
+<br>
+</ul>
+<li>Client Error(4xx)</li>
+<ul>
+<li>This status shows that the request that is send to the server has error or interrupted.</li>
+<li>The common example of this is the 403 Forbidden. This means that the server refused to give the resources that the client needs.</li>
+<br>
+</ul>
+<li>Server Error(5xx)</li>
+<ul>
+<li>This status indicates that the server is incapable or an error has occurred in sending the response.</li>
+<li>The common example is the 502. This means that the server is getting invalid response from another server.</li>
+</ul>
+</ol>
+            </div>
+        </div>
+    </section>
+	<br>
+	<br>
+	<br>
+	<br>
+		<br>
+	<br>
+	<br>
+	<br>
+	
+	
+
+   
+
+
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+   
+
+    <!-- Theme JavaScript -->
+    <script src="js/grayscale.min.js"></script>
+
+</body>
+
+</html>

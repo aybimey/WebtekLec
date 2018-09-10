@@ -1,0 +1,36 @@
+HTTP REQUEST
+The http client send a request to the server that form a request message.
+
+*Request Line- it begins to a method token that followed by the Request URI and the protocol version, and it ends to CRLF and it separated by space or SP character
+
+*Request Header / Message Header- It contains a general header and Entity header. The message header allows the client to pass the additional infromation about the request and also the client to the server, and acts like request modifiers. 
+These are the important message header field:
+
+       message-header 
+       field-name    
+       field-value    
+       field-content
+etc.
+
+*Empty Line- the empty line consists of CRLF that theres no space
+
+
+*Message Body - The http message used the entity body to connect to the request or the response, and it differs from entity body when the transfer-coding has been applied.
+message-body = entity-body
+                    | <entity-body encoded as per Transfer-Encoding>
+ 
+
+URLhttps://www.tutorialspoint.com/http/http_requests.htm
+Website Titlewww.tutorialspoint.com
+Article TitleHTTP Requests
+Date AccessedSeptember 09, 2018
+
+URLhttps://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html
+Website TitleExtensible Markup Language (XML) 1.0 (Fifth Edition)
+Article TitleHTTP/1.1: Request
+Date AccessedSeptember 09, 2018
+
+URLhttps://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html
+Website TitleExtensible Markup Language (XML) 1.0 (Fifth Edition)
+Article TitleHTTP/1.1: Request
+Date AccessedSeptember 09, 2018

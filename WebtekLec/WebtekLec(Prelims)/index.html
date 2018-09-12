@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -71,8 +72,6 @@
 					<li>
                         <a class="page-scroll" href="#Status"> HTTP Status Code </a>
                     </li>
-
-
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -96,7 +95,7 @@
         </div>
     </header>
 
-    <!-- introduction Section -->
+    <!-- Introduction Section -->
     <section id="introduction" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
@@ -108,206 +107,235 @@
 					<li>Port 80 is the port that the server listens to or expects to receive from web client</li>
 					<li>HTTP is based on client - server architecture </li>
 					<li>HTTP-defines the message structure between web browser or web client requesting content or resources and the web server that is delivering the application.</li>
-
 				</ul>
-                </div>
+            </div>
         </div>
     </section>
 
-    <!-- httpversion Section -->
+    <!-- HTTP Version Section -->
     <section id="httpversion" class="content-section text-center">
         <div class="httpversion-section">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2>HTTP Versions </h2>
 					<ul>
-<li>HTTP 0.9 - This version was the first version of HTTP protocol and was defined in 1991. this version only consists of one method which is the GET. This method can only request a page from Server and has a response of an HTML</li> Page. 
-<li>HTTP 1 - This version provides both request and response using http version number, status code and content type. This consist of 3 methods namely, GET, HEAD, POST.</li>
-<li>HTTP 1.1- This is the commonly used version currently. This version supports the following methods: GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS.</li>
-<li>HTTP 2- This is the latest version of http that allows multiple request at the same time which makes the process of fetching web pages faster.
-.</li>
-
+						<li>HTTP 0.9 - This version was the first version of HTTP protocol and was defined in 1991. this version only consists of one method which is the GET. This method can only request a page from Server and has a response of an HTML</li> Page. 
+						<li>HTTP 1 - This version provides both request and response using http version number, status code and content type. This consist of 3 methods namely, GET, HEAD, POST.</li>
+						<li>HTTP 1.1- This is the commonly used version currently. This version supports the following methods: GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS.</li>
+						<li>HTTP 2- This is the latest version of http that allows multiple request at the same time which makes the process of fetching web pages faster.</li>
 					</ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- terminologies Section -->
+    <!-- HTTP Request & Response Message Section -->
     <section id="terminologies" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>HTTP Request & Response Message</h2>
 				<br>
 				<h3>HTTP Request Message</h3>
-              <img src="/img/http.jpg" >
+				<p>HTTP Request consists of Message Headers, Request Line, Empty Line, Body.</p>
+				<img src="img/http.JPG" width="800">
+				<br>
+				<br>
 				<ul>
-<p>The http client send a request to the server that form a request message.</p>
-<li>Request Line  -it begins to a method token that followed by the Request URI and the protocol version, and it ends to CRLF and it separated by space or SP character</li>
-<li>Message Header  -It contains a general header and Entity header. The message header allows the client to pass the additional information about the request and also the client to the server, and acts like request modifiers. 
-These are the important message header field:</li>
-<br>
-				<ul>
-				<li>Accept-Charset</li>
-<li>Accept-Encoding</li>
-<li>Accept-Language</li>
-<li>Authorization</li>
-<li>Expect</li>
-<li>From</li>
-<li>Host</li>    
+					<li>
+						Message Header  - It contains a general header and Entity header.
+						These are the important message header field:
+						<br><br>
+						<table align="center">
+							<tr>
+								<td>Accept</td>
+								<td>image/gif/txt</td>
+							</tr>
+							<tr>
+								<td>Accept-Language</td>
+								<td>en-us</td>
+							</tr>
+							<tr>
+								<td>Accept-Encoding</td>
+								<td>gzip, deflate, br</td>
+							</tr>
+							<tr>
+								<td>Authorization</td>
+								<td>www.google.com</td>
+							</tr>
+						</table>
+					</li>
 				</ul>
-				<li>Empty Line  -the empty line consists of CRLF that there’s no space
-Message Body  The http message used the entity body to connect to the request or the response, and it differs from entity body when the transfer-coding has been applied.
-Ex.
-message-body = entity-body
-                | <entity-body encoded as per Transfer-Encoding></li>
-
-				</ul>
-				<h3>HTTP Response Message</h3>
+				<br><br>
+				<img src="img/request header.JPG" width="800">
+				<br><br>
 				<ul>
-				<li>After receiving a request message, a server responds with an HTTP response message.</li>
-<li>Response message use caching to store a copy of the response message and the system that controls its message storage, retrieval and deletion.</li>
-<br>
-<p>According to RFC 2616 HTTP/1.1 June 1999</o>
-<li>A response comes directly without unnecessary delay and its validity is directly checked with the origin server.</li>
-<h3>Status-Line</h3>
-<li>Status line is the first line in a response message it consists of protocol version followed by their corresponding numeric status code and textual phrase.</li>
-<img src="img/statusline.png">
-<br>
-<h3>Status code and Reason Phrase</h3>
-<li>Status-code element is a 3- digit integer result code to understand the request.</li>
-<li>Reason Phrase is intended to give a short description for the status code.</li>
-<p>Example of common Status code and Reason Phrase are:</p>
-</ul>
-<li>”403 Forbidden”</li>
-<li>”404 Page Not Found”</li>
-<li>”200 OK”</li>
-<li>”500 Internal Server Error”</li>
-</ul>
-<br>
-
-<h3>Response Header- Field</h3>
-<li>Allows the server to pass additional information about the response which cannot be placed in the status line, it gives information about the server and access to its resource requested by URI. 
-</li>
-<table style="width:100%">
-  <tr>
-    <th></th>
-    <th></th> 
-  </tr>
-  <tr>
-    <td>Accept-Ranges</td>
-    <td>Used by the server to support the partial request.</td>
-  </tr>
-  <tr>
-    <td>Age</td>
-    <td>It contains of the time seconds the object has stayed in the cache.</td>
-  </tr>
-  <tr>
-  <td>ETag</td>
-  <td>a mechanism that puts unchanged resources into the cache.</td>
-  </td>
-  <tr>
-  <td>Location</td>
-  <td>is the indicator when redirecting to another page it specifies the URL to be used.</td>
-  </tr>
-  <tr>
-  <td>Proxy-Authentication</td>
-  <td>is the one which chooses the authentication method to be used so that access can be gained to a resource behind a proxy server.</td>
-  </tr>
-  <tr>
-  <td>Retry-After</td>
-  <td>is the one responsible in informing the user agent on how long to wait before making another follow-up request.</td>
- </tr>
- <tr>
- <td>Server</td>
- <td>handles requests because it contains the information about the software that is being used by the origin server.</td>
- </tr>
- <tr>
- <td>Vary</td>
- <td>determines the matching of future request headers to be able to come up whether a cached response could be used or if it should request a new one from the origin server.</td>
- </tr>
- <tr>
- <td>WWW-Authenticate</td>
- <td>is the one responsible in defining the authentication method that is the one responsible in defining the authentication method that  </tr>
- </tr>
-
-</table>
-<br>
-	<h3>Empty line</h3>
-	<p>According to RFC 822</p>
-	<li>Empty line- indicating the end of the header field and message body.</li>
-	<br>
-	<h3>Message Body</h3>
-	<li>Message body is a protocol element it represents line break that breaks between body-parts.</li>
+					<li>
+						Request Line  - The request line contains URI(User Resource Identifier), HTTP
+						Version Number, HTTP Verb, and also identify the different method token (GET, POST, PUT, DELETE).
+					</li>
+				</ul>
+				<br><br>
+				<img src="img/http version.JPG" width="800">
+				<br><br>
+				<ul>
+					<li>
+						Message Body - Connects to the request and responds and it differs from entity body you can also add any other information about the request that is sent to the server.
+					</li>
+					<li>
+						Empty Line - It seperates the two entities: the header and the body.
+					</li>
 				</ul>
 				
-            </div>
+				<h3>HTTP Response Message</h3>
+				<ul>
+					<li>If a request is completed, a specific response will be sent to the server.</li>
+					<li>A server replies with an HTTP response message after getting the request message.</li>
+					<li>Response message use caching to store a copy of the response message and the system that controls its message storage, retrieval and deletion.</li>
+				</ul>	
+					<br>
+					<p>According to RFC 2616 HTTP/1.1 June 1999</p>
+				<ul>
+					<li>A response comes directly without unnecessary delay and its validity is directly checked with the origin server.</li>
+					<h3>Status-Line</h3>
+					<li>Status line is the first line in a response message it consists of protocol version followed by their corresponding numeric status code and textual phrase.</li>
+					<img src="img/statusline.png">
+					<br>
+					<h3>Status code and Reason Phrase</h3>
+					<li>Status-code element is a 3- digit integer result code to understand the request.</li>
+					<li>Reason Phrase is intended to give a short description for the status code.</li>
+					<p>Example of common Status code and Reason Phrase are:</p>
+				</ul>
+				<li>”403 Forbidden”</li>
+				<li>”404 Page Not Found”</li>
+				<li>”200 OK”</li>
+				<li>”500 Internal Server Error”</li>
+			
+			<br>
+			<h3>Response Header- Field</h3>
+			<li>
+				Allows the server to pass additional information about the response which cannot be placed in the status line, it gives information about the server and access to its resource requested by URI. 
+			</li>
+			<br><br>
+		<table style="width:100%">
+			<tr>
+				<td>Accept-Ranges</td>
+				<td>Used by the server to support the partial request.</td>
+			</tr>
+			<tr>
+				<td>Age</td>
+				<td>It contains of the time seconds the object has stayed in the cache.</td>
+			</tr>
+			<tr>
+				<td>ETag</td>
+				<td>a mechanism that puts unchanged resources into the cache.</td>
+			</td>
+			<tr>
+				<td>Location</td>
+				<td>is the indicator when redirecting to another page it specifies the URL to be used.</td>
+			</tr>
+			<tr>
+				<td>Proxy-Authentication</td>
+				<td>is the one which chooses the authentication method to be used so that access can be gained to a resource behind a proxy server.</td>
+			</tr>
+			<tr>
+				<td>Retry-After</td>
+				<td>is the one responsible in informing the user agent on how long to wait before making another follow-up request.</td>
+			</tr>
+			<tr>
+				<td>Server</td>
+				<td>handles requests because it contains the information about the software that is being used by the origin server.</td>
+			</tr>
+			<tr>
+				<td>Vary</td>
+				<td>determines the matching of future request headers to be able to come up whether a cached response could be used or if it should request a new one from the origin server.</td>
+			</tr>
+			<tr>
+				<td>WWW-Authenticate</td>
+				<td>is the one responsible in defining the authentication method that is the one responsible in defining the authentication method that  </tr>
+			</tr>
+		</table>
+		<br>
+		<h3>Empty line</h3>
+		<p>According to RFC 822</p>
+		<ul>
+			<li>Empty line- indicating the end of the header field and message body.</li>
+		</ul>
+		<br>
+		<h3>Message Body</h3>
+		<ul>
+			<li>Message body is a protocol element it represents line break that breaks between body-parts.</li>
+		</ul>
+			</div>
         </div>
     </section>
 	
-	    <!-- terminologies Section -->
+	<!--Http Request Method-->
     <section id="request" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>HTTP Request Methods</h2>
 				<ul>
-				<li>Get - Get method requests and retrieves a representation of a specific resource.</li>
-				<li>Head - Head method is similar to get request but it has no response body.</li>
-				<li>Post - This method is used to send an entity to a specific resource. It usually triggers side effects.</li>
-				<li>Put - his method changes current representations of the target resource with the request payload.</li>
-				<li>Delete - This method will trigger deletion onto a specific resource.</li>
-				<li>Options - This method describes the communication options for the specified target resource</li>
-				<li>Trace - Performs a message loop back test along the path towards the specified target resource.</li>
-				<li>Connect - Method that creates a tunnel to the server defined by the target resource.</li>
+					<li>Get - Get method requests and retrieves a representation of a specific resource.</li>
+					<li>Head - Head method is similar to get request but it has no response body.</li>
+					<li>Post - This method is used to send an entity to a specific resource. It usually triggers side effects.</li>
+					<li>Put - his method changes current representations of the target resource with the request payload.</li>
+					<li>Delete - This method will trigger deletion onto a specific resource.</li>
+					<li>Options - This method describes the communication options for the specified target resource</li>
+					<li>Trace - Performs a message loop back test along the path towards the specified target resource.</li>
+					<li>Connect - Method that creates a tunnel to the server defined by the target resource.</li>
 				</ul>
-				<br>
-				<h4>Idempotent Methods</h4>
+					<br>
+					<h4>Idempotent Methods</h4>
+					<li>
+						These are methods that doesn't change their outcomes regardless of how many times you call or execute them.
+						GET, HEAD, PUT, DELETE share this property.
+					</li>
+					<br>
+					<h4>Safe Methods</h4>
 				<ul>
-				<li>GET, HEAD, PUT, DELETE share this property.</li>
+					<li>
+						These are methods that which does not alter or change specified resources. 
+						GET, HEAD, PUT, DELETE share this property.
+					</li>
 				</ul>
             </div>
         </div>
     </section>
-	    <!-- httpmessages Section -->
-	    <section id="httpmessages" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>HTTP Message Headers </h2>
-				<p>Consists of four types which is the General-header, The Client Request-header, The Server Response-header and the Entity-header. These are ones responsible in providing necessary information with regards to the request or response. A name which will then be followed by a colon is present in the header fields.</p>
-				<ul>
-				<li>General Header Fields - General Header Fields are the ones that are generally applicable for both the response and response messages although they don’t have relation to the data that is being transmitted to the HTTP message body.
-</li>
-<br>
-				<li>Request Header Fields - The Request Header is where you can know more information about the data to be fetched or information regarding the client. In Addition to that when you specify what information you really need, you can actually modify the request.
-</li>
-<br>
-				<li>Response Header Fields - The Response Header Fields are only applicable for response messages. This certain header field can also be used to give us a thorough context of the response.
-</li>
-<br>
-				<li> Empty Header Fields - The Entity-header fields are the ones responsible for defining the Meta information regarding the entity-body, the resource that is identified upon request is only defined if nobody is present. This header is applied to the body of the request. </li>
-				</ul>
-                
-            </div>
-        </div>
-    </section>
-	<br>
-	<br>
-	<br>
-	<br>
-		<br>
-	<br>
-	<br>
-	<br>
-		<br>
-	<br>
-	<br>
-	<br>
 	
-		    <!-- httpmessages Section -->
-	    <section id="Status" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>HTTP Status Code </h2>
+	<!-- http messages Section -->
+	<section id="httpmessages" class="container content-section text-center">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2">
+				<h2>HTTP Message Headers</h2>
+				<p>
+					Consists of four types which is the General-header, The Client Request-header, The Server Response-header and the Entity-header. These are ones responsible in providing necessary information with regards to the request or response. A name which will then be followed by a colon is present in the header fields.
+				</p>
+				<ul>
+					<li>
+						General Header Fields - General Header Fields are the ones that are generally applicable for both the response and response messages although they don’t have relation to the data that is being transmitted to the HTTP message body.
+					</li>
+					<br>
+					<li>
+						Request Header Fields - The Request Header is where you can know more information about the data to be fetched or information regarding the client. In Addition to that when you specify what information you really need, you can actually modify the request.
+					</li>
+					<br>
+					<li>
+						Response Header Fields - The Response Header Fields are only applicable for response messages. This certain header field can also be used to give us a thorough context of the response.
+					</li>
+					<br>
+					<li>
+						Entity Header Fields - The Entity-header fields are the ones responsible for defining the Meta information regarding the entity-body, the resource that is identified upon request is only defined if nobody is present. This header is applied to the body of the request. 
+					</li>
+				</ul>                
+			</div>
+		</div>
+	</section>
+	<br><br><br><br><br><br><br><br><br><br><br><br>
+		
+	<section id="Status" class="container content-section text-center">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2">
+				<h2>HTTP Status Code </h2>
 				<ul>
 					<li>Located in the response message</li>
 					<li>They give information about the response, if they are successful or failed.</li>
@@ -356,23 +384,11 @@ message-body = entity-body
 					<br>
 					<br>
 				</ol>
-            </div>
-        </div>
-    </section>
-	<br>
-	<br>
-	<br>
-	<br>
-		<br>
-	<br>
-	<br>
-	<br>
-	
-	
-
-   
-
-
+			</div>
+		</div>
+	</section>
+		
+	<br><br><br><br><br><br><br><br>
 
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.js"></script>
@@ -383,11 +399,8 @@ message-body = entity-body
     <!-- Plugin JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
-   
-
-    <!-- Theme JavaScript -->
+	<!-- Theme JavaScript -->
     <script src="js/grayscale.min.js"></script>
 
 </body>
-
 </html>
